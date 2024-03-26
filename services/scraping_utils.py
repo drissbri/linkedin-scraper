@@ -8,7 +8,7 @@ from settings import LINKEDIN_ACCEESS_TOKEN,LINKEDIN_ACCEESS_TOKEN_EXP
 
 # Setting up the options
 options = Options()
-#options.add_argument("--headless=new")
+options.add_argument("--headless=new")
 options.add_argument('--ignore-ssl-errors=yes')
 options.add_argument('--ignore-certificate-errors=yes')
 options.add_argument("--log-level=3")
@@ -147,7 +147,7 @@ def add_session_cookie(driver):
         "httpOnly": True,
         "expirationDate":LINKEDIN_ACCEESS_TOKEN_EXP,
     }
-    # Adding cookies to the driver
+    # Add cookies to the driver
     try:
         driver.get("https://www.linkedin.com")
         driver.add_cookie(cookie)
