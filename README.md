@@ -1,4 +1,4 @@
-# LinkedIn Scraper API
+# LinkedIn Scraper RESTful API
 
 ## Overview
 
