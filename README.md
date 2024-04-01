@@ -143,7 +143,13 @@ Error handling is consistent across endpoints, aiming to provide meaningful feed
 ## Notes
 
 - Ensure that the LinkedIn access token is valid and not expired to avoid authentication errors.
-- This scraper is intended for educational purposes and should be used in accordance with LinkedIn's terms of service.
+
+## Project Structure
+
+- `api/routes.py` - Contains api routes.
+- `services/candidate_scraper.py` - contians the scraping function for individuals profiles.
+- `services/company_scraper.py` - contians the scraping function for companies profiles.
+- `services/scraping_utils.py` - contians the functions and options used in the scraping process for both profiles and companies.
 
 ## Contributing
 
