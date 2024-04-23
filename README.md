@@ -1,4 +1,4 @@
-# LinkedIn Scraper API
+# LinkedIn Scraper RESTful API
 
 ## Overview
 
@@ -29,7 +29,8 @@ This project is a LinkedIn Scraper built using Selenium for web scraping and Fas
 
 ## Configuration
 
-1. **Environment Variables**
+**Environment Variables**
+
    - Create a `.env` file in the root of the project.
    - Add the following environment variables:
      ```
@@ -39,6 +40,35 @@ This project is a LinkedIn Scraper built using Selenium for web scraping and Fas
      ```
    - Replace `"YourLinkedInAccessToken"` and `"AccessTokenExpiration"` with your actual LinkedIn access token and its expiration time.
    - Change  `"HEADLESS"` to False if you dont want the browser to open in headless mode.
+
+### Obtaining LinkedIn Access Token with Cookie-Editor
+
+To fetch data using the LinkedIn Scraper, you'll need a LinkedIn access token. The following steps will guide you through obtaining this token using the Cookie-Editor browser addon:
+
+#### Step 1: Install Cookie-Editor
+
+- **Install Cookie-Editor**: Add the [Cookie-Editor](https://cookie-editor.com/) addon to your browser. It's available for [Chrome](https://chromewebstore.google.com/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/cookie-editor), and other popular browsers. Visit the addon store for your browser and search for "Cookie-Editor" to install.
+
+#### Step 2: Access LinkedIn
+
+- **Log into LinkedIn**: Open your browser and log into your LinkedIn account as you normally would.
+
+#### Step 3: Open Cookie-Editor
+
+- **Launch Cookie-Editor**: Once logged in, click on the Cookie-Editor icon in your browser's toolbar to open the addon.
+
+#### Step 4: Find the Access Token
+
+- **Search for Access Token**: In the Cookie-Editor interface, look for a cookie named `li_at` or similar. This cookie contains your LinkedIn access token.
+![LinkedIn Cookie-Editor](https://i.imgur.com/JzdNF3n.png "Linkedin access token")
+- **Copy the Token**: Click on the `li_at` cookie to view its details, and copy the value. This is your LinkedIn access token.
+- **Copy the expiration time**: Convert the Expiration time into numeric format (timestamp) like `1743212774.0` , and copy the value. This is your LinkedIn access token expiration time.
+
+
+### Important Notes
+
+- **Token Validity**: LinkedIn access tokens are temporary. Ensure to check the token's validity periodically and update it as needed.
+- **Privacy and Security**: Handle your access token securely as it grants access to your LinkedIn data. Do not share your token publicly.
 
 ## Usage
 
@@ -115,7 +145,13 @@ Error handling is consistent across endpoints, aiming to provide meaningful feed
 ## Notes
 
 - Ensure that the LinkedIn access token is valid and not expired to avoid authentication errors.
-- This scraper is intended for educational purposes and should be used in accordance with LinkedIn's terms of service.
+
+## Project Structure
+
+- `api/routes.py` - Contains api routes.
+- `services/candidate_scraper.py` - contians the scraping function for individuals profiles.
+- `services/company_scraper.py` - contians the scraping function for companies profiles.
+- `services/scraping_utils.py` - contians the functions and options used in the scraping process for both profiles and companies.
 
 ## Contributing
 
