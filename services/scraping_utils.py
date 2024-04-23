@@ -8,7 +8,7 @@ from settings import LINKEDIN_ACCEESS_TOKEN, LINKEDIN_ACCEESS_TOKEN_EXP, HEADLES
 
 # Setting up the options
 options = Options()
-if HEADLESS==True:
+if not HEADLESS==False:
     options.add_argument("--headless=new")
 options.add_argument('--ignore-ssl-errors=yes')
 options.add_argument('--ignore-certificate-errors=yes')
