@@ -34,9 +34,11 @@ This project is a LinkedIn Scraper built using Selenium for web scraping and Fas
    - Add the following environment variables:
      ```
      LINKEDIN_ACCESS_TOKEN="YourLinkedInAccessToken"
-     LINKEDIN_ACCESS_TOKEN_EXP="AccessTokenExpiration"
+     LINKEDIN_ACCESS_TOKEN_EXP=AccessTokenExpiration
+     HEADLESS=True
      ```
    - Replace `"YourLinkedInAccessToken"` and `"AccessTokenExpiration"` with your actual LinkedIn access token and its expiration time.
+   - Change  `"HEADLESS"` to False if you dont want the browser to open in headless mode.
 
 ## Usage
 

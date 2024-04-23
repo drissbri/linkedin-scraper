@@ -4,11 +4,12 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-from settings import LINKEDIN_ACCEESS_TOKEN,LINKEDIN_ACCEESS_TOKEN_EXP
+from settings import LINKEDIN_ACCEESS_TOKEN, LINKEDIN_ACCEESS_TOKEN_EXP, HEADLESS
 
 # Setting up the options
 options = Options()
-options.add_argument("--headless=new")
+if HEADLESS==True:
+    options.add_argument("--headless=new")
 options.add_argument('--ignore-ssl-errors=yes')
 options.add_argument('--ignore-certificate-errors=yes')
 options.add_argument("--log-level=3")
