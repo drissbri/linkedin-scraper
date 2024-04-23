@@ -30,6 +30,8 @@ def scrape_linkedin_profile(linkedin_id):
         # Scrape name,experinces,education form the LinkedIn profile
         try:
             name = search_for_candidate_name(driver)
+            if name == "null":
+                return {"error": "Your Linkedin session token is not set up correctly or has expired"}
             headline = search_for_candidate_headline(driver)
             education = search_for_section(driver,"Education")
             experience = search_for_section(driver,"Experience")
