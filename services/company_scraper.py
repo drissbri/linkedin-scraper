@@ -30,7 +30,9 @@ def scrape_linkedin_company(linkedin_id):
         # Scrape name,about form the LinkedIn company
         try:
             name = search_for_company_name(driver)
-            if name == "null":
+            if not name:
+                driver.quit()
+                print("scraping failed due to session token not setup or expired")
                 return {"error": "Your Linkedin session token is not set up correctly or has expired"}
             industry = search_for_company_industry(driver)
             about = search_for_company_about(driver)
