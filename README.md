@@ -65,10 +65,12 @@ To fetch data using the LinkedIn Scraper, you'll need a LinkedIn access token. T
 - **Copy the expiration time**: Convert the Expiration time into numeric format (timestamp) like `1743212774.0` , and copy the value. This is your LinkedIn access token expiration time.
 
 
-### Important Notes
-- <span style="color:red; font-weight:bold">**IMPORTANT:** If you continue to encounter issues with the access tokens being undefined or expired even after following these steps, please replace the values directly in the `settings.py` file.</span>
+### Notes
 - **Token Validity**: LinkedIn access tokens are temporary. Ensure to check the token's validity periodically and update it as needed.
 - **Privacy and Security**: Handle your access token securely as it grants access to your LinkedIn data. Do not share your token publicly.
+
+> [!IMPORTANT]
+> **If you continue to encounter issues with the access tokens being undefined or expired even after following these steps, please replace the values directly in the `settings.py` file.**
 
 ## Usage
 
