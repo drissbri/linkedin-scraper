@@ -135,7 +135,6 @@ def search_for_company_about(driver):
     return None
     
 
-
 def add_session_cookie(driver):
     """"load cookies from a file and add it to the driver"""
 

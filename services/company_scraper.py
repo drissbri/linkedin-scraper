@@ -38,7 +38,7 @@ def scrape_linkedin_company(linkedin_id):
             about = search_for_company_about(driver)
         except Exception as e:
             print(f"Error scraping details for company {linkedin_id} : {e}")
-            return {"error": "Error searching for details for company {linkedin_id}"}
+            return {"error": f"Error searching for details for company {linkedin_id}"}
 
         driver.quit()
 
@@ -51,4 +51,4 @@ def scrape_linkedin_company(linkedin_id):
         }
     except Exception as e:
         print(f"Error feching details for comapny {linkedin_id} : {e}")
-        return {"error": "Error feching company details for {linkedin_id}"}
+        return {"error": f"Error feching company details for {linkedin_id}"}

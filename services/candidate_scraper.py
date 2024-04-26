@@ -39,7 +39,7 @@ def scrape_linkedin_profile(linkedin_id):
             experience = search_for_section(driver,"Experience")
         except Exception as e:
             print(f"Error scraping details for {linkedin_id} : {e}")
-            return {"error": "Error searching for details for {linkedin_id}"}
+            return {"error": f"Error searching for details for {linkedin_id}"}
     
         driver.quit()
 
@@ -54,4 +54,4 @@ def scrape_linkedin_profile(linkedin_id):
     
     except Exception as e:
         print(f"Error feching details for {linkedin_id} : {e}")
-        return {"error": "Error feching profile details for {linkedin_id}"}
+        return {"error": f"Error feching profile details for {linkedin_id}"}
