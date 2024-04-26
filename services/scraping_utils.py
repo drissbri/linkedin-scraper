@@ -136,8 +136,7 @@ def search_for_company_about(driver):
     
 
 def add_session_cookie(driver):
-    """"load cookies from a file and add it to the driver"""
-
+    """load cookies from a file and add it to the driver"""
     cookie = {
         "domain": ".www.linkedin.com",
         "name": "li_at",
