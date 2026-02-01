@@ -1,3 +1,4 @@
+import os
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
@@ -15,7 +16,8 @@ options.add_argument('--ignore-certificate-errors=yes')
 options.add_argument("--log-level=3")
 
 # Setting up service
-service = Service(ChromeDriverManager().install(), log_output='nul')
+log_output = 'nul' if os.name == 'nt' else '/dev/null'
+service = Service(ChromeDriverManager().install(), log_output=log_output)
 
 def find_by_xpath_or_None(driver, *xpaths):
     """returns the text inside and elemnt by its xPath"""
